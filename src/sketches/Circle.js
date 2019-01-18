@@ -1,4 +1,4 @@
-export const Circle = p => {
+export const circle = p => {
 	p.setup = () => {
 		p.createCanvas(240, 280);
 	};

@@ -13,25 +13,21 @@ class App extends React.Component {
 		};
 	}
 
-	selectSketch = event => {
-		let selection =
-			event.target.name;
+	selectSketch = (event) => {
+    debugger
+		let selection = event.target.name;
 		this.setState({
 			sketchType: selection
 		});
 	};
 
 	render() {
+
 		return (
 			<div>
-				<ControlPanel />
+				<ControlPanel selectSketch={this.selectSketch} sketchType={this.state.sketchType}/>
 				<div className="sketch">
-					<Canvas
-						sketch={
-							this.state
-								.sketchType
-						}
-					/>
+					<Canvas sketchType={this.state.sketchType} />
 				</div>
 			</div>
 		);

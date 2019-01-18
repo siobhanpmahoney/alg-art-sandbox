@@ -1,10 +1,17 @@
 import React from 'react';
 
-const ControlPanel = props => {
+const ControlPanel = (props) => {
+
 	return (
 		<div className="control-panel">
 			<div className="buttons">
-				<button className="circle">
+				{!!props.sketchType ? (
+					<button name={null} onClick={props.selectSketch}>
+						Clear
+					</button>
+				) : null}
+
+				<button onClick={props.selectSketch} name="circle" id={props.sketchType == "circle" ? "active" : "inactive"}>
 					Circle
 				</button>
 			</div>

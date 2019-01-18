@@ -1,1 +1,1 @@
-import { Circle } from './Circle';
+import { circle } from './circle';
