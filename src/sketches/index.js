@@ -1,7 +1,10 @@
 import { circle } from './circle';
-import { coords } from './coords'
+import { point } from './point'
+import { line } from './line'
 
-export const sketches = {
+
+export const sketchObj = {
   circle: circle,
-  coords: coords
+  point: point,
+  line: line
 }

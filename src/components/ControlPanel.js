@@ -11,13 +11,13 @@ const ControlPanel = (props) => {
 					</button>
 				) : null}
 
-				<button onClick={props.selectSketch} name="circle" id={props.sketchType == "circle" ? "active" : "inactive"}>
-					Circle
-				</button>
-
-				<button onClick={props.selectSketch} name="coords" id={props.sketchType == "coords" ? "active" : "inactive"}>
-					Coords
-				</button>
+				{props.sketches.map((sk) => {
+					return (
+						<button onClick={props.selectSketch} key={sk} name={sk} className={props.sketchType == sk ? "active" : "inactive"}>
+							{sk}
+						</button>
+					)
+				})}
 			</div>
 		</div>
 	);

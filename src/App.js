@@ -1,5 +1,5 @@
 import React from 'react';
-import {sketches} from './sketches/index';
+import {sketchObj} from './sketches/index';
 import Canvas from './components/Canvas';
 import ControlPanel from './components/ControlPanel'
 import './App.css';
@@ -14,23 +14,27 @@ class App extends React.Component {
 	}
 
 	selectSketch = (event) => {
-    debugger
+
 		let selection = event.target.name;
 		this.setState({
-			sketchType: sketches[selection]
+			sketchType: sketchObj[selection]
 		});
 	};
 
 	render() {
+    // if (!sketches) {
+    //   return <div>loading...</div>
+    // } else {
 
 		return (
 			<div>
-				<ControlPanel selectSketch={this.selectSketch} sketchType={this.state.sketchType}/>
+				<ControlPanel sketches={Object.keys(sketchObj)} selectSketch={this.selectSketch} sketchType={this.state.sketchType}/>
 				<div className="sketch">
 					<Canvas sketchType={this.state.sketchType} />
 				</div>
 			</div>
-		);
+		)
+  // }
 	}
 }
 
