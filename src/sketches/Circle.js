@@ -1,6 +1,8 @@
 export const circle = p => {
 	p.setup = () => {
-		p.createCanvas(240, 280);
+
+		p.createCanvas(720, 400);
+
 	};
 
 	p.draw = () => {

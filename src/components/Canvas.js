@@ -9,7 +9,7 @@ class Canvas extends React.Component {
 		return (
 			<div className="canvas">
 				{!!this.props.sketchType ? (
-					<P5Wrapper sketch={circle} />
+					<P5Wrapper sketch={sketch} />
 				) : (
 					<div className="no-sketch-msg">
 						Pick a sketch

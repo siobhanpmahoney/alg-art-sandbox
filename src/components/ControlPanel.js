@@ -14,6 +14,10 @@ const ControlPanel = (props) => {
 				<button onClick={props.selectSketch} name="circle" id={props.sketchType == "circle" ? "active" : "inactive"}>
 					Circle
 				</button>
+
+				<button onClick={props.selectSketch} name="coords" id={props.sketchType == "coords" ? "active" : "inactive"}>
+					Coords
+				</button>
 			</div>
 		</div>
 	);

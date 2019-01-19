@@ -1,5 +1,5 @@
 import React from 'react';
-import * as sketches from './sketches';
+import {sketches} from './sketches/index';
 import Canvas from './components/Canvas';
 import ControlPanel from './components/ControlPanel'
 import './App.css';
@@ -17,7 +17,7 @@ class App extends React.Component {
     debugger
 		let selection = event.target.name;
 		this.setState({
-			sketchType: selection
+			sketchType: sketches[selection]
 		});
 	};
 
