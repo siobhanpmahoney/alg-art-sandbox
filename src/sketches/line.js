@@ -4,10 +4,16 @@ export const line = (p) => {
   }
 
   p.draw = () => {
-  
+    p.background(0);
+    p.noFill()
+    p.stroke(153, 0, 285)
+    p.strokeWeight(4)
+    p.line(p.width * 0.25, p.height*0.25, p.width*0.75, p.height*0.75);
 
-    p.stroke(0, 153, 255);
-    p.line(0, p.height*0.33, p.width, p.height*0.33);
+    p.stroke(153, 0, 285)
+    p.strokeWeight(4)
+    p.line(p.width * 0.75, p.height * 0.25, p.width*0.25, p.height * 0.75)
+
 
   }
 }
